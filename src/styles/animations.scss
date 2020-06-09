@@ -1,0 +1,51 @@
+@keyframes bl-size {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+@keyframes bl-move {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+}
+
+//===================UNDERLINES=========================//
+
+@keyframes first-uline {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 120px;
+  }
+}
+@keyframes second-uline {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 66%;
+  }
+}
+@keyframes last-uline {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 33%;
+  }
+}

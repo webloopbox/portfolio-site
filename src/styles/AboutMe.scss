@@ -1,0 +1,29 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  margin: 0 25px;
+  color: $primary;
+  overflow-x: hidden;
+}
+.about-content {
+}
+#about h2 {
+  position: relative;
+  margin: 0;
+  font-size: 32px;
+}
+#about p {
+  margin-top: 30px;
+  color: #5b5b5b;
+  font-size: 17px;
+}
+.about-image {
+  display: none;
+}
+#avatar {
+  //border: 1px solid black;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}

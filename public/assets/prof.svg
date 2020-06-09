@@ -1,0 +1,10 @@
+<svg width="247" height="248" viewBox="0 0 247 248" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M6.17763 107.74C-12.1399 75.6845 11.5825 31.9413 60.0826 9.44134C100.583 -9.34719 163.428 29.492 198 76C232.753 122.752 274.5 176 221 227C183.885 262.38 106.256 249.151 96.5 209C83.5 155.5 34.1776 156.74 6.17763 107.74Z" fill="#F6F6F6"/>
+<path d="M48.6056 69C64 28 69 0.744951 128.707 0.744934C190.544 0.744917 220.938 26.2067 239.207 87.245C253.5 135 222 180 199 195.5C169.063 215.675 98.8593 269.059 41.6057 175C27.6056 152 35.0541 105.092 48.6056 69Z" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="translate(-0.471825) scale(0.00101232)"/>
+</pattern>
+<image id="image0" width="1920" height="1080" xlink:href="https://unsplash.it/600/600"/>
+</defs>
+</svg>
