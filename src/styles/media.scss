@@ -42,6 +42,29 @@
 }
 
 @media (min-width: 1024px) {
+  .nav-items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav-items li:last-child {
+    margin-right: 30px;
+  }
+
+  .nav-items a {
+    font-size: 18px;
+    color: white;
+  }
+  .nav-items a::before {
+    color: white;
+  }
+  .nav-items a::after {
+    background: white;
+  }
+
   .burger {
     display: none;
   }
@@ -115,7 +138,7 @@
   }
   #about {
     flex-direction: row;
-    margin: 80px 50px 0 50px;
+    margin: 0 50px;
   }
   #avatar {
   }
@@ -137,7 +160,8 @@
     width: 100%;
   }
   #about {
-    margin: 250px 100px 0 100px;
+    margin: 200px 100px 0 100px;
+    padding-top: 180px;
   }
   #about h2 {
     font-size: 40px;

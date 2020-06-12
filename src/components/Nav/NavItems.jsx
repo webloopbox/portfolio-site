@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const NavItemsOverlay = styled.div`
   position: absolute;
@@ -146,7 +144,7 @@ const NavItems = (props) => {
 
   return (
     <>
-      <NavItemsOverlay open={props.open} />
+      {/* <NavItemsOverlay open={props.open} />
 
       <ScollLinks open={props.open}>
         {items.map((item, index) => {
@@ -173,7 +171,7 @@ const NavItems = (props) => {
             </CSSTransition>
           );
         })}
-      </ScollLinks>
+      </ScollLinks> */}
     </>
   );
 };

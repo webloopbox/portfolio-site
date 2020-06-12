@@ -5,10 +5,28 @@ import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeItem: 0,
+    };
+    this.changeActive = this.changeActive.bind(this);
+  }
+
+  changeActive(index) {
+    this.setState((prevState) => ({ activeItem: index }));
+  }
+
   render() {
     return (
       <>
-        <Navbar />
+        <Navbar
+          info={{
+            active: this.state.activeItem,
+            change: this.changeActive,
+            navTab: this.state.navTab,
+          }}
+        />
         <Hero />
         <AboutMe />
       </>

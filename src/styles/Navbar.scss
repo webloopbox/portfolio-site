@@ -4,9 +4,23 @@
   left: 0;
   width: 100%;
   height: 80px;
-  //border: 1px solid black;
   font-family: "Roboto", sans-serif;
   z-index: 100;
+  transition: background-color 0.2s, box-shadow 0.2s, height 0.2s;
+}
+#navbar.navtab {
+  background-color: white;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2);
+  height: 70px;
+}
+#navbar.navtab .nav-items a {
+  color: $primary;
+}
+#navbar.navtab .nav-items a::after {
+  background: linear-gradient(to right, #26b5b3, #7f2fe0);
+}
+#navbar.navtab .nav-items a::before {
+  color: black;
 }
 
 #nav-container {
@@ -16,42 +30,82 @@
   height: 100%;
   max-width: 1140px;
   margin: 0 auto;
-  //border: 1px solid black;
   #nav-logo {
+    position: relative;
     font-weight: 900;
     color: black;
-    // border: 1px solid black;
     letter-spacing: -3px;
     text-decoration: none;
     margin-left: 25px;
     font-size: 1.8rem;
+    z-index: 100;
   }
 }
 
-.fade-enter {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-5px);
-}
-
-.fade-enter-active {
-}
-.fade-enter-done {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(5px);
-  transition: opacity 1s, visibility 1s, transform 1s;
-}
-.fade-exit {
-  opacity: 0;
-}
-.fade-exit-active {
+.burger {
+  z-index: 100;
 }
 
 .burger.burger-squeeze.open .burger-lines:before {
-  background-color: #ffffff;
+  //background-color: #ffffff;
 }
 
 .burger.burger-squeeze.open .burger-lines:after {
-  background-color: #ffffff;
+  //background-color: #ffffff;
+}
+
+.nav-items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items a {
+  position: relative;
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  color: $primary;
+}
+
+.nav-items a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #26b5b3, #7f2fe0);
+  border-radius: 9px;
+  height: 3px;
+  transition: width 0.3s;
+}
+
+li.current a::after {
+  width: 100%;
+}
+
+.nav-items a::before {
+  content: attr(data-hover);
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  height: 0px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: black;
+  transition: height 0.5s;
+}
+
+li.current a::before {
+  height: 100%;
 }
