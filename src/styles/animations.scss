@@ -22,30 +22,12 @@
 
 //===================UNDERLINES=========================//
 
-@keyframes first-uline {
+@keyframes fade-left {
   from {
-    width: 0;
+    transform: translateX(50px);
   }
 
   to {
-    width: 120px;
-  }
-}
-@keyframes second-uline {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 66%;
-  }
-}
-@keyframes last-uline {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 33%;
+    transform: translateX(0px);
   }
 }

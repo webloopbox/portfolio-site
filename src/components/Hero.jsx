@@ -1,8 +1,9 @@
 import React from "react";
 import UnderLine from "./UnderLineEffect";
+import Reveal from "react-reveal/Reveal";
 
 const Hero = (props) => (
-  <div id="hero-container">
+  <section id="hero-container">
     <div className="hero-content">
       <h1>
         FRONT-END
@@ -22,8 +23,10 @@ const Hero = (props) => (
         <div className="bubble bl_6"></div>
       </div>
     </div>
-    <img className="hero-bg" src="./assets/bg1.svg" />
-  </div>
+    <Reveal effect="fadeLeft">
+      <img className="hero-bg" src="./assets/bg1.svg" />
+    </Reveal>
+  </section>
 );
 
 export default Hero;

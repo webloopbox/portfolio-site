@@ -1,6 +1,5 @@
 import React from "react";
-import NavItems from "./NavItems";
-import styled, { withTheme } from "styled-components";
+import styled from "styled-components";
 import Burger from "@animated-burgers/burger-squeeze";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
 import Scrollspy from "react-scrollspy";
@@ -129,11 +128,11 @@ class NavBar extends React.Component {
       },
       {
         name: "Technologie",
-        section: "",
+        section: "#technologies",
       },
       {
         name: "Portfolio",
-        section: "",
+        section: "#portfolio",
       },
       {
         name: "Kontakt",
@@ -150,7 +149,7 @@ class NavBar extends React.Component {
 
           <ScrollLinks open={this.state.open}>
             <Scrollspy
-              items={["hero-container", "about"]}
+              items={["hero-container", "about", "technologies", "portfolio"]}
               currentClassName="current"
               className="nav-items"
             >

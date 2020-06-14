@@ -1,0 +1,51 @@
+#tech-list {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.tech-item {
+  width: 50%;
+  min-height: 150px;
+}
+
+.tech-item-icon {
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tech-item-icon img {
+  height: 60%;
+}
+
+.tech-item-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: $primary;
+  text-align: center;
+}
+hr {
+  border: 1px solid #f2f2f2;
+}
+
+.more-tools-title {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 40px 0 0 0;
+  background-color: #ededed;
+}
+
+.more-tools {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.tool-item {
+  width: 50%;
+  min-height: 150px;
+}
