@@ -9,29 +9,34 @@ const AboutMe = (props) => (
         <Fade left delay={0}>
           O MNIE
         </Fade>
-        <UnderLine />
       </h2>
+      <UnderLine />
       <Fade left delay={500}>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo
-          officia neque veniam amet dolore consectetur, sed praesentium cumque
-          quaerat vero culpa impedit ex officiis sequi modi molestiae?
-          Recusandae, amet! Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Quis nemo officia neque veniam amet dolore consectetur, sed
-          praesentium cumque quaerat vero culpa impedit ex officiis sequi modi
-          molestiae? Recusandae, amet!
+          Strony przeze mnie tworzone wyróżniają się wysoką jakością i są dobrze
+          zoptymalizowane pod kątem SEO.
+        </p>
+      </Fade>
+      <Fade left delay={550}>
+        <p>
+          Doskonale działają na wszystkich urządzeniach, dopasowywując się do
+          każdej rozdzielczości. Dbam o każdy szczegół i kończę zlecenia w
+          wyznaczonym terminie. Dużą wagę przywiązuję na jakość i otymalizację
+          kodu, tak aby strona wczytywała się szybko, bez spadków wydajności.
+        </p>
+      </Fade>
+      <Fade left delay={600}>
+        <p>
+          Obecnie wykonuję zlecenia na landing page, strony wizytówkowe oraz
+          portofolia. Do każdej strony podpinam wygodny i prosty w obsłudze
+          system zarządzania treścią na stronie. Również ulepszam istniejące
+          strony o nowe funkcje i możliwości.
         </p>
       </Fade>
     </div>
     <Fade right delay={500}>
       <div className="about-image">
-        <svg
-          id="avatar"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          fill="none"
-          viewBox="0 0 247 260"
-        >
+        <svg id="avatar" fill="none" viewBox="0 0 247 260">
           <path
             fill="#F6F6F6"
             d="M6.178 107.74C-12.14 75.685 11.582 31.941 60.083 9.441 100.583-9.347 163.428 29.492 198 76c34.753 46.752 76.5 100 23 151-37.115 35.38-114.744 22.151-124.5-18-13-53.5-62.322-52.26-90.322-101.26z"

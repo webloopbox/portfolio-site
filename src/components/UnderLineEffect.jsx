@@ -3,9 +3,7 @@ import styled from "styled-components";
 import Reveal from "react-reveal/Reveal";
 
 const UnderLine = styled.div`
-  position: absolute;
-  bottom: -5px;
-  left: 0;
+  position: relative;
   height: 7px;
   width: 0;
   transition: width 0.5s;

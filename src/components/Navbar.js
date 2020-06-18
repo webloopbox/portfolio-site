@@ -112,7 +112,7 @@ class NavBar extends React.Component {
   }
 
   toggleMenu() {
-    document.body.classList.toggle("disablescroll");
+    document.documentElement.classList.toggle("disablescroll");
     this.setState((prevState) => ({ open: !prevState.open }));
   }
 

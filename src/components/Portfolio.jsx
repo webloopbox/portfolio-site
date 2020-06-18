@@ -23,8 +23,8 @@ class Portfolio extends React.Component {
             <Fade left delay={0}>
               PORTFOLIO
             </Fade>
-            <UnderLine />
           </h2>
+          <UnderLine />
         </div>
         <div className="portfolio-items">
           {details.map((item, index) => (

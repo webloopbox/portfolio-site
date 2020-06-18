@@ -57,8 +57,8 @@ class Technologies extends React.Component {
             <Fade left delay={0}>
               TECHNOLOGIE
             </Fade>
-            <UnderLine />
           </h2>
+          <UnderLine />
         </div>
         <div id="tech-list">
           {tech.map((item, index) => (

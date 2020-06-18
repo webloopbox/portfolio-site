@@ -1,14 +1,19 @@
+#about {
+  //border: 1px solid black;
+}
 #about p {
-  margin-top: 50px;
+  margin: 25px 0;
   color: #5b5b5b;
   font-size: 17px;
+  line-height: 32px;
+}
+#about p:nth-of-type(1) {
+  margin-top: 40px;
 }
 .about-image {
   display: none;
 }
 #avatar {
-  //border: 1px solid black;
-  width: 60%;
   display: block;
   margin: 0 auto;
 }
