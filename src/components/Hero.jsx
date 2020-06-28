@@ -15,7 +15,7 @@ const Hero = (props) => (
       </h4>
       <UnderLine />
       <button>
-        <a href="#">Podejmij współpracę</a>
+        <a href="#contact">Podejmij współpracę</a>
       </button>
       <div id="hero-bubbles">
         <div className="bubble bl_1"></div>

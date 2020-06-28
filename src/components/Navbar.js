@@ -136,7 +136,7 @@ class NavBar extends React.Component {
       },
       {
         name: "Kontakt",
-        section: "",
+        section: "#contact",
       },
     ];
 
@@ -144,12 +144,18 @@ class NavBar extends React.Component {
       <nav id="navbar" className={this.state.navTab ? "navtab" : "no"}>
         <div id="nav-container">
           <a id="nav-logo" href="#">
-            pm
+            PAWEŁ MAREK
           </a>
 
           <ScrollLinks open={this.state.open}>
             <Scrollspy
-              items={["hero-container", "about", "technologies", "portfolio"]}
+              items={[
+                "hero-container",
+                "about",
+                "technologies",
+                "portfolio",
+                "contact",
+              ]}
               currentClassName="current"
               className="nav-items"
             >
