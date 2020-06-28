@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Portfolio from "./components/Portfolio";
 import Technologies from "./components/Technologies";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   render() {
@@ -15,6 +17,8 @@ class App extends React.Component {
         <AboutMe />
         <Technologies />
         <Portfolio />
+        <Contact />
+        <Footer />
       </>
     );
   }

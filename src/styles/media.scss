@@ -1,8 +1,17 @@
 @media (min-width: 640px) {
+  #nav-container #nav-logo {
+    font-size: 1.3rem;
+  }
   .hero-img {
     bottom: -5%;
     right: 10%;
     width: 300px;
+  }
+  .hero-content h4 span {
+    padding: 10px 15px;
+  }
+  .hero-content {
+    font-size: calc(5vw + 16px);
   }
   .bl_1 {
     display: block;
@@ -49,6 +58,17 @@
   }
   .more-tools-title {
     font-size: 20px;
+  }
+  #contact-form #client-name,
+  #contact-form #email {
+    width: 48%;
+  }
+  #contact-form #client-name {
+    float: left;
+  }
+  #contact-form #email {
+    float: right;
+    margin-top: 0;
   }
 }
 
@@ -123,8 +143,8 @@
     font-size: 55px;
   }
   .hero-content h4 span {
-    padding: 5px 10px;
-    font-size: 24px;
+    padding: 10px 15px;
+    font-size: 23.5px;
   }
   .hero-content a {
     padding: 15px 20px;
@@ -170,11 +190,12 @@
   }
   .section-about,
   .section-technologies,
-  .section-portfolio {
+  .section-portfolio,
+  .section-contact {
     flex-direction: row;
     width: 90%;
     max-width: 1650px;
-    margin: 0 auto;
+    margin: 1px auto;
   }
   #avatar {
     height: 300px;
@@ -201,6 +222,80 @@
   .tool-item {
     width: 20%;
   }
+  #portfolio {
+    padding-bottom: 150px;
+  }
+  .thumbnail-overlay {
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s, width 0.2s, height 0.2s, visibility 0.2s;
+  }
+  .portfolio-item:hover .thumbnail-overlay {
+    width: 100%;
+    height: 100%;
+  }
+  .overlay-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s;
+  }
+  .portfolio-item:hover .overlay-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s, visibility 0.4s;
+    transition-delay: 0.2s;
+  }
+  .overlay-content,
+  .overlay-content .check {
+    font-size: 20px;
+  }
+  #contact-more,
+  #contact-form {
+    width: 50%;
+  }
+  .contact-items {
+    padding-bottom: 80px;
+  }
+  #contact-more {
+    margin-top: 0px;
+  }
+  #contact-form {
+    max-width: none;
+    text-align: left;
+  }
+  #contact-form form input,
+  #contact-form form textarea,
+  #submit {
+    height: 55px;
+    font-size: 16px;
+  }
+  #submit {
+    width: 180px;
+  }
+  #envelope-icon {
+    max-width: 480px;
+  }
+  .own-mail {
+    height: 55px;
+    max-width: 320px;
+    padding: 0 30px;
+  }
+  #e-mail {
+    width: 35px;
+    height: 35px;
+  }
+  .contact-more a img:hover {
+    filter: drop-shadow(0px 0px 10px #6495ed);
+  }
+  #footer p {
+    font-size: 16px;
+  }
+  .scroll-to-top {
+    display: block;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -208,6 +303,7 @@
     height: 110%;
   }
   .hero-content {
+    margin: 0 100px;
   }
   .hero-img {
     bottom: auto;
@@ -220,7 +316,8 @@
   }
 
   .section-technologies,
-  .section-portfolio {
+  .section-portfolio,
+  .section-contact {
     padding-top: 180px;
   }
   .section-title {
@@ -251,6 +348,9 @@
   }
   .more-tools {
     margin-top: 50px;
+  }
+  #portfolio {
+    padding-bottom: 250px;
   }
 }
 @media (min-width: 1900px) {

@@ -78,7 +78,7 @@ class Technologies extends React.Component {
         </Zoom>
         <div className="more-tools">
           {tools.map((item, index) => (
-            <Fade key={index} delay={80 * index}>
+            <Fade key={index} delay={100 * index}>
               <div className="tool-item">
                 <div className="tech-item-icon">
                   <img src={item.src} alt="" />
