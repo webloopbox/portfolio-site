@@ -59,16 +59,17 @@
   .more-tools-title {
     font-size: 20px;
   }
-  #contact-form #client-name,
-  #contact-form #email {
-    width: 48%;
+  #contact-form .form-field:nth-of-type(1),
+  #contact-form .form-field:nth-of-type(2) {
+    width: 49%;
+    margin-bottom: 0;
+    margin-top: 0;
   }
-  #contact-form #client-name {
+  #contact-form .form-field:nth-of-type(1) {
     float: left;
   }
-  #contact-form #email {
+  #contact-form .form-field:nth-of-type(2) {
     float: right;
-    margin-top: 0;
   }
 }
 
@@ -290,6 +291,24 @@
   .contact-more a img:hover {
     filter: drop-shadow(0px 0px 10px #6495ed);
   }
+  #send-message {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    display: inline-block;
+    margin-left: 50px;
+    color: rgb(0, 165, 0);
+    transition: 0.5s;
+  }
+
+  #send-message-none {
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 50px;
+    transform: translateY(-30px);
+    transition: 0.5s;
+  }
   #footer p {
     font-size: 16px;
   }
@@ -351,6 +370,9 @@
   }
   #portfolio {
     padding-bottom: 250px;
+  }
+  #contact-form h4 {
+    font-size: 18px;
   }
 }
 @media (min-width: 1900px) {

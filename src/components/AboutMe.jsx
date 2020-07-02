@@ -62,7 +62,7 @@ const AboutMe = (props) => (
               id="prefix__image0"
               width={1280}
               height={2276}
-              href="./assets/prof3.jpg"
+              href="./assets/prof.jpg"
             />
           </defs>
         </svg>

@@ -2,8 +2,143 @@ import React from "react";
 import UnderLine from "./UnderLineEffect";
 import Fade from "react-reveal/Fade";
 import Reveal from "react-reveal/Reveal";
+import validator from "validator";
+import * as emailjs from "emailjs-com";
+
+const initialState = {
+  username: "",
+  surname: "",
+  email: "",
+  phoneNumber: "",
+  message: "",
+  usernameError: "",
+  surnameError: "",
+  emailError: "",
+  phoneNumberError: "",
+  messageError: "",
+  disableSubmit: true,
+  submitMessage: false,
+};
 
 class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = initialState;
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  initialIsCapital(word) {
+    return word[0] !== word[0].toLowerCase();
+  }
+
+  validate() {
+    let fields = [
+      this.state.username,
+      this.state.surname,
+      this.state.phoneNumber,
+      this.state.message,
+      this.state.email,
+    ];
+    let errors = ["", "", "", "", ""];
+
+    fields.map((item, index) => {
+      if (!item) {
+        errors[index] += "Uzupełnij brakujące pole";
+      }
+    });
+
+    if (fields[0]) {
+      if (!this.initialIsCapital(fields[0])) {
+        errors[0] = "Pole powinno zaczynać się z dużej litery";
+      }
+    }
+    if (fields[1]) {
+      if (!this.initialIsCapital(fields[1])) {
+        errors[1] = "Pole powinno zaczynać się z dużej litery";
+      }
+    }
+
+    if (!validator.isMobilePhone(fields[2])) {
+      errors[2] = "Niepoprawny numer telefonu";
+    }
+
+    if (!validator.isEmail(fields[4])) {
+      errors[4] = "Niepoprawny adres email";
+    }
+
+    let usernameError = errors[0];
+    let surnameError = errors[1];
+    let phoneNumberError = errors[2];
+    let messageError = errors[3];
+    let emailError = errors[4];
+
+    if (
+      usernameError ||
+      emailError ||
+      surnameError ||
+      phoneNumberError ||
+      messageError
+    ) {
+      this.setState({
+        usernameError,
+        emailError,
+        surnameError,
+        phoneNumberError,
+        messageError,
+      });
+      return false;
+    }
+
+    return true;
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
+    const isValid = this.validate();
+    if (isValid) {
+      emailjs
+        .sendForm(
+          "smtp_server",
+          "contact",
+          ".contact_submit",
+          "user_nybD6PQmmtceHmYidmfss"
+        )
+        .then()
+        .catch();
+      this.setState(initialState);
+      this.setState((prev) => ({
+        submitMessage: true,
+      }));
+      setTimeout(() => {
+        this.setState((prev) => ({
+          submitMessage: false,
+        }));
+      }, 1500);
+    }
+  }
+
+  handleChange = (event) => {
+    this.setState(
+      {
+        [event.target.name]: event.target.value,
+      },
+      () => {
+        if (
+          this.state.username !== "" &&
+          this.state.surname !== "" &&
+          this.state.email !== "" &&
+          this.state.phoneNumber !== "" &&
+          this.state.message !== ""
+        ) {
+          this.setState((prev) => ({ disableSubmit: false }));
+        } else {
+          this.setState((prev) => ({ disableSubmit: true }));
+        }
+      }
+    );
+  };
+
   render() {
     return (
       <section id="contact-100w">
@@ -12,25 +147,96 @@ class Contact extends React.Component {
             <Fade left>KONTAKT</Fade>
           </h2>
           <UnderLine />
+
           <div className="contact-items">
             <div id="contact-form">
+              <Fade delay={100}>
+                <h4>
+                  Dla usprawnienia współpracy przygotowałem formularz
+                  kontaktowy, dzięki któremu mogę lepiej oszacować koszty
+                  realizacji i opracować wstępną ofertę. Możesz również napisać
+                  do mnie bezpośrednio na mój adres e-mail, który znajduje się
+                  poniżej.
+                </h4>
+              </Fade>
+              <hr className="contact-divider" />
               <Fade delay={200}>
-                <form action="#">
-                  <input
-                    id="client-name"
-                    type="text"
-                    placeholder="Imię i nazwisko*"
-                  />
-                  <input id="email" type="email" placeholder="Email*" />
-                  <input id="title" type="text" placeholder="Temat" />
-                  <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Treść wiadomości"
-                  ></textarea>
-                  <button id="submit" type="submit">
+                <form
+                  onSubmit={this.handleSubmit.bind(this)}
+                  className="contact_submit"
+                >
+                  <div className="form-field">
+                    <input
+                      id="username"
+                      type="text"
+                      value={this.state.username}
+                      onChange={this.handleChange}
+                      placeholder="Imię*"
+                      name="username"
+                    />
+                    <p className="error-message">{this.state.usernameError}</p>
+                  </div>
+                  <div className="form-field">
+                    <input
+                      id="surname"
+                      type="text"
+                      value={this.state.surname}
+                      onChange={this.handleChange}
+                      placeholder="Nazwisko*"
+                      name="surname"
+                    />
+                    <p className="error-message">{this.state.surnameError}</p>
+                  </div>
+                  <div className="form-field">
+                    <input
+                      id="email"
+                      type="text"
+                      value={this.state.email}
+                      onChange={this.handleChange}
+                      placeholder="Email*"
+                      name="email"
+                    />
+                    <p className="error-message">{this.state.emailError}</p>
+                  </div>
+                  <div className="form-field">
+                    <input
+                      id="phonenumber"
+                      type="text"
+                      value={this.state.phoneNumber}
+                      onChange={this.handleChange}
+                      placeholder="Numer telefonu"
+                      name="phoneNumber"
+                    />
+                    <p className="error-message">
+                      {this.state.phoneNumberError}
+                    </p>
+                  </div>
+                  <div className="form-field">
+                    <textarea
+                      name="message"
+                      id="message"
+                      value={this.state.message}
+                      onChange={this.handleChange}
+                      placeholder="Treść wiadomości*"
+                    />
+                    <p className="error-message">{this.state.messageError}</p>
+                  </div>
+                  <button
+                    disabled={this.state.disableSubmit}
+                    id="submit"
+                    type="submit"
+                  >
                     <i className="fas fa-paper-plane"></i> WYŚLIJ
                   </button>
+                  <p
+                    id={
+                      this.state.submitMessage
+                        ? "send-message"
+                        : "send-message-none"
+                    }
+                  >
+                    <i className="fas fa-check"></i> Wiadomość została wysłana
+                  </p>
                 </form>
               </Fade>
             </div>
@@ -280,13 +486,19 @@ class Contact extends React.Component {
               </Fade>
               <div className="contact-more">
                 <Fade right cascade>
-                  <a href="https://facebook.com" target="_blank">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100006214383201"
+                    target="_blank"
+                  >
                     <img src="./assets/fb-icon.svg" />
                   </a>
-                  <a href="https://messenger.com" target="_blank">
+                  <a href="http://m.me/100006214383201" target="_blank">
                     <img src="./assets/msg-icon.svg" />
                   </a>
-                  <a href="https://skype.com" target="_blank">
+                  <a
+                    href="https://join.skype.com/invite/iqL4npGnml2L"
+                    target="_blank"
+                  >
                     <img src="./assets/skype-icon.svg" />
                   </a>
                 </Fade>
