@@ -7,13 +7,15 @@ class Portfolio extends React.Component {
     const details = [
       {
         name: "serwis komputerowy",
-        src: "./assets/serwis.jpg",
+        src: "./assets/strona1.jpg",
         tech: "HTML / CSS / JS / WORDPRESS",
+        link: "https://strona1.pawelmarek.com",
       },
       {
         name: "CREATIX",
-        src: "./assets/firma_stolarska.jpg",
+        src: "./assets/strona2.jpg",
         tech: "HTML / CSS / JS / WORDPRESS",
+        link: "https://strona2.pawelmarek.com",
       },
     ];
 
@@ -32,7 +34,11 @@ class Portfolio extends React.Component {
             {details.map((item, index) => (
               <Fade up delay={300 * index} key={index}>
                 <div className="portfolio-item">
-                  <a className="portfolio-item-link" href="#">
+                  <a
+                    className="portfolio-item-link"
+                    href={item.link}
+                    target="_blank"
+                  >
                     <img src={item.src} alt="portfolio-thumbnail" />
                     <div className="thumbnail-overlay">
                       <div className="overlay-content">

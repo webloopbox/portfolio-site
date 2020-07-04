@@ -158,8 +158,9 @@ class Contact extends React.Component {
                   do mnie bezpośrednio na mój adres e-mail, który znajduje się
                   poniżej.
                 </h4>
+
+                <hr className="contact-divider" />
               </Fade>
-              <hr className="contact-divider" />
               <Fade delay={200}>
                 <form
                   onSubmit={this.handleSubmit.bind(this)}
