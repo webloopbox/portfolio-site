@@ -7,7 +7,7 @@ class Technologies extends React.Component {
   render() {
     const tech = [
       {
-        name: "HTML 5",
+        name: "HTML5",
         src: "./assets/html.svg",
       },
       {
