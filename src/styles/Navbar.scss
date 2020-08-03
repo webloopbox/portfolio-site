@@ -100,7 +100,7 @@
   transition: width 0.3s;
 }
 
-li.current a::after {
+.nav-items a.current::after {
   width: 100%;
 }
 
@@ -117,7 +117,6 @@ li.current a::after {
   color: black;
   transition: height 0.5s;
 }
-
-li.current a::before {
+.nav-items a.current::before {
   height: 100%;
 }

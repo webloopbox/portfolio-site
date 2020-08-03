@@ -30,7 +30,7 @@ const Hero = (props) => (
       <img className="hero-bg" src="./assets/bg1.svg" />
     </Reveal>
 
-    <Fade right>
+    <Fade right delay={150}>
       <div className="hero-img">
         <svg fill="none" viewBox="0 0 298 400">
           <g className="illustration-laptop">

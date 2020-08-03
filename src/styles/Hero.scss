@@ -8,6 +8,8 @@
 }
 .hero-bg {
   display: none;
+  user-select: none;
+  pointer-events: none;
 }
 .hero-content {
   margin: 0 25px;
@@ -120,6 +122,8 @@
   bottom: 5%;
   right: 10%;
   width: 200px;
+  user-select: none;
+  pointer-events: none;
   z-index: -1;
 }
 .illustration-msg {

@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Burger from "@animated-burgers/burger-squeeze";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
-import Scrollspy from "react-scrollspy";
 import debounce from "lodash.debounce";
+import { Link } from "react-scroll";
 
 const ScrollLinks = styled.div`
   position: fixed;
@@ -120,23 +120,23 @@ class NavBar extends React.Component {
     const items = [
       {
         name: "Home",
-        section: "#hero-container",
+        section: "hero-container",
       },
       {
         name: "O Mnie",
-        section: "#about",
+        section: "about",
       },
       {
         name: "Technologie",
-        section: "#technologies",
+        section: "technologies",
       },
       {
         name: "Portfolio",
-        section: "#portfolio",
+        section: "portfolio",
       },
       {
         name: "Kontakt",
-        section: "#contact",
+        section: "contact",
       },
     ];
 
@@ -148,21 +148,17 @@ class NavBar extends React.Component {
           </a>
 
           <ScrollLinks open={this.state.open}>
-            <Scrollspy
-              items={[
-                "hero-container",
-                "about",
-                "technologies",
-                "portfolio",
-                "contact",
-              ]}
-              currentClassName="current"
-              className="nav-items"
-            >
+            <ul className="nav-items">
               {items.map((item, index) => {
                 return (
-                  <li key={index}>
-                    <a
+                  <li key={index} className="test1">
+                    <Link
+                      activeClass="current"
+                      className="link"
+                      to={item.section}
+                      spy={true}
+                      smooth={true}
+                      duration={400}
                       onClick={
                         this.state.isMobile
                           ? () => {
@@ -171,14 +167,13 @@ class NavBar extends React.Component {
                           : null
                       }
                       data-hover={item.name}
-                      href={item.section}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
-            </Scrollspy>
+            </ul>
           </ScrollLinks>
 
           <Burger

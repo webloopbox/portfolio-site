@@ -330,8 +330,9 @@
     width: 600px;
   }
   .section-about {
-    margin: 200px auto;
+    margin: 0px auto;
     padding-top: 180px;
+    padding-bottom: 200px;
   }
 
   .section-technologies,
@@ -369,7 +370,7 @@
     margin-top: 50px;
   }
   #portfolio {
-    padding-bottom: 250px;
+    //padding-bottom: 250px;
   }
   #contact-form h4 {
     font-size: 18px;
