@@ -38,6 +38,10 @@ class Technologies extends React.Component {
         name: "SASS",
         src: "./assets/sass.svg",
       },
+      {
+        name: "REACT.JS",
+        src: "./assets/react.svg",
+      },
     ];
     const tools = [
       {

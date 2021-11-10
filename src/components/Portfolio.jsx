@@ -3,6 +3,17 @@ import UnderLine from "./UnderLineEffect";
 import Fade from "react-reveal/Fade";
 
 class Portfolio extends React.Component {
+
+  componentDidMount() {
+    const portfolio_items = document.getElementsByClassName("portfolio-item");
+    console.log(portfolio_items);
+
+    if(portfolio_items.length % 2 == 1) {
+      portfolio_items[portfolio_items.length-1].style.margin = "50px auto 0 auto"
+    }
+
+  }
+
   render() {
     const details = [
       {
@@ -16,6 +27,12 @@ class Portfolio extends React.Component {
         src: "./assets/strona2.jpg",
         tech: "HTML / CSS / JS / WORDPRESS",
         link: "https://strona2.pawelmarek.com",
+      },
+      {
+        name: "CREATIX",
+        src: "./assets/weatherapp.jpg",
+        tech: "REACT.JS",
+        link: "https://weather.pawelmarek.com",
       },
     ];
 

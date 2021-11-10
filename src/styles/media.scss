@@ -210,10 +210,10 @@
     display: block;
     width: 45%;
   }
-  .tech-item {
-    width: auto;
-    flex: 1;
-  }
+  // .tech-item {
+  //   width: auto;
+  //   flex: 1;
+  // }
   .tech-item-icon img {
     height: 70%;
   }
@@ -356,6 +356,10 @@
   }
   #tech-list {
     margin-top: 80px;
+  }
+  .tech-item {
+    width: auto;
+    flex: 1;
   }
   .tool-item {
     width: 15%;
