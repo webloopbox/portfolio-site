@@ -496,11 +496,8 @@ class Contact extends React.Component {
                   <a href="http://m.me/100006214383201" target="_blank">
                     <img src="./assets/msg-icon.svg" />
                   </a>
-                  <a
-                    href="https://join.skype.com/invite/iqL4npGnml2L"
-                    target="_blank"
-                  >
-                    <img src="./assets/skype-icon.svg" />
+                  <a href="https://github.com/webloopbox" target="_blank">
+                    <img src="./assets/github.svg" />
                   </a>
                 </Fade>
               </div>
