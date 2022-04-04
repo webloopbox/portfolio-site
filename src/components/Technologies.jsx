@@ -19,28 +19,28 @@ class Technologies extends React.Component {
         src: "./assets/js.svg",
       },
       {
-        name: "RWD",
-        src: "./assets/rwd.svg",
-      },
-      {
         name: "GIT",
         src: "./assets/git.svg",
       },
       {
-        name: "NPM",
-        src: "./assets/npm.svg",
+        name: "NODE.JS",
+        src: "./assets/node.svg",
       },
       {
         name: "WORDPRESS",
         src: "./assets/wp.svg",
       },
       {
-        name: "SASS",
-        src: "./assets/sass.svg",
+        name: "SCSS",
+        src: "./assets/scss.svg",
       },
       {
         name: "REACT.JS",
         src: "./assets/react.svg",
+      },
+      {
+        name: "REDUX",
+        src: "./assets/redux.svg",
       },
     ];
     const tools = [

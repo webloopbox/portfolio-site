@@ -13,25 +13,17 @@ const AboutMe = (props) => (
       <UnderLine />
       <Fade left delay={500}>
         <p>
-          Strony przeze mnie tworzone wyróżniają się wysoką jakością, estetyką
-          oraz są dobrze zoptymalizowane pod kątem SEO.
+          Obecnie jestem studentem I roku studiów na wydziale Elektrotechniki, Automatyki i Informatyki Politechniki Świętokrzyskiej.
         </p>
       </Fade>
       <Fade left delay={550}>
         <p>
-          Doskonale działają na wszystkich urządzeniach, dopasowywując się do
-          każdej rozdzielczości. Dbam o każdy szczegół i kończę zlecenia na
-          czas. Dużą wagę przywiązuję na jakość i otymalizację kodu, tak aby
-          strona wczytywała się szybko, bez spadków wydajności.
+           Konkretnym obszarem, w którym się rozwijam jest Frontend. Dobrze jestem zaznajomiony z biblioteką React, do zarządzania stanem całej aplikacji wykorzystuję Redux. Od niedawna zacząłem poszerzać swoją wiedzę o Typescript.
         </p>
       </Fade>
       <Fade left delay={600}>
         <p>
-          Obecnie wykonuję zlecenia na landing page, strony wizytówkowe, blogi
-          oraz portofolia. Do każdej strony podpinam wygodny i prosty w obsłudze
-          system zarządzania treścią, przez co w łatwy sposób można aktualizować
-          jej zawartość. Również ulepszam istniejące strony o nowe funkcje i
-          możliwości.
+          Strony przeze mnie tworzone wyróżniają się jakością, estetyką oraz wysoką wydajnością. Doskonale działają na wszystkich urządzeniach, dopasowywując się do każdej rozdzielczości. Przywiązuję bardzo dużą uwagę do szczegółów.
         </p>
       </Fade>
     </div>
