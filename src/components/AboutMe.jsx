@@ -18,7 +18,7 @@ const AboutMe = (props) => (
       </Fade>
       <Fade left delay={550}>
         <p>
-           Konkretnym obszarem, w którym się rozwijam jest Frontend. Dobrze jestem zaznajomiony z biblioteką React, do zarządzania stanem całej aplikacji wykorzystuję Redux. Od niedawna zacząłem poszerzać swoją wiedzę o Typescript.
+           Konkretnym obszarem, w którym się rozwijam jest Frontend. Jestem dobrze zaznajomiony z biblioteką React, najnowszymi standardami języka JavaScript, oraz Redux, do zarządzania stanem aplikacji. Od niedawna zacząłem poszerzać swoją wiedzę o Typescript. 
         </p>
       </Fade>
       <Fade left delay={600}>
