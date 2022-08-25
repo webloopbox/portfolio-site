@@ -6,7 +6,6 @@ class Portfolio extends React.Component {
 
   componentDidMount() {
     const portfolio_items = document.getElementsByClassName("portfolio-item");
-    console.log(portfolio_items);
 
     if(portfolio_items.length % 2 == 1) {
       portfolio_items[portfolio_items.length-1].style.margin = "50px auto 0 auto"

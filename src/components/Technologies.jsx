@@ -42,6 +42,10 @@ class Technologies extends React.Component {
         name: "REDUX",
         src: "./assets/redux.svg",
       },
+      {
+        name: "TYPESCRIPT",
+        src: "./assets/ts.svg",
+      },
     ];
     const tools = [
       {
