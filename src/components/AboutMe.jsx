@@ -18,12 +18,12 @@ const AboutMe = (props) => (
       </Fade>
       <Fade left delay={550}>
         <p>
-           Konkretnym obszarem, w którym się rozwijam jest Frontend. Jestem dobrze zaznajomiony z biblioteką React, najnowszymi standardami języka JavaScript, oraz Redux, do zarządzania stanem aplikacji. Od niedawna zacząłem poszerzać swoją wiedzę o Typescript. 
+           Technologie webowe są głównym obszarem, w którym się rozwijam. Posiadam solidną wiedzę i doświadczenie w tworzeniu aplikacji webowych, wykorzystując różnorodne narzędzia i technologie. Potrafię projektować interfejsy użytkownika, implementować logikę biznesową i komunikować się z REST API. 
         </p>
       </Fade>
       <Fade left delay={600}>
         <p>
-          Strony przeze mnie tworzone wyróżniają się jakością, estetyką oraz wysoką wydajnością. Doskonale działają na wszystkich urządzeniach, dopasowywując się do każdej rozdzielczości. Przywiązuję bardzo dużą uwagę do szczegółów.
+          Jestem również zaangażowany w ciągłe poszerzanie swojej wiedzy i umiejętności, aby być na bieżąco z najnowszymi trendami i narzędziami. Moje doświadczenie z TypeScript pozwala mi tworzyć bardziej bezpieczny i skalowalny kod, z silnym typowaniem i statyczną analizą.
         </p>
       </Fade>
     </div>
