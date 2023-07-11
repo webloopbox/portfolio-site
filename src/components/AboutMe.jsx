@@ -13,7 +13,7 @@ const AboutMe = (props) => (
       <UnderLine />
       <Fade left delay={500}>
         <p>
-          Obecnie jestem studentem II roku studiów na wydziale Elektrotechniki, Automatyki i Informatyki Politechniki Świętokrzyskiej.
+          Obecnie jestem studentem III roku studiów na wydziale Elektrotechniki, Automatyki i Informatyki Politechniki Świętokrzyskiej.
         </p>
       </Fade>
       <Fade left delay={550}>
