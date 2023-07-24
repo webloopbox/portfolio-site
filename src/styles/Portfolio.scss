@@ -20,16 +20,29 @@
   border-radius: 9px;
   box-shadow: 0px 0px 10px rgb(211, 211, 211);
   overflow: hidden;
+  &-last {
+    font-family: "Roboto";
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    color: rgb(48, 58, 82);
+    background: #ffffff;
+    text-decoration: none;
+  }
 }
 
 .portfolio-item img {
   display: block;
   line-height: 0;
+  object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 
 .portfolio-item-link {
   display: block;
+  height: 100%;
 }
 
 #gray-wave {
