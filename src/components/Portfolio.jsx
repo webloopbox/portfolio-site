@@ -85,7 +85,7 @@ class Portfolio extends React.Component {
                 href="https://github.com/webloopbox/WeatherApp"
                 className="portfolio-item portfolio-item-last"
               >
-                Check for more on my github
+                Check for more on my GitHub
               </a>
             </Fade>
           </div>
