@@ -42,7 +42,7 @@
 }
 
 .burger {
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   transform: translateY(-50%);
   right: 25px;
@@ -52,18 +52,10 @@
   z-index: 100;
 }
 
-.burger .burger-lines,
-.burger .burger-lines:after,
-.burger .burger-lines:before {
+button.burger .burger-lines,
+button.burger .burger-lines:after,
+button.burger .burger-lines:before {
   background-color: black;
-}
-
-.burger.burger-squeeze.open .burger-lines:before {
-  //background-color: #ffffff;
-}
-
-.burger.burger-squeeze.open .burger-lines:after {
-  //background-color: #ffffff;
 }
 
 .nav-items {
